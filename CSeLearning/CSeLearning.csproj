@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DE43827-6E37-4E7A-945A-BBE89057731A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UserControls</RootNamespace>
+    <AssemblyName>UserControls</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="autentikacija.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>autentikacija.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="autentikacija.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>autentikacija.tt</DependentUpon>
+    </Compile>
+    <Compile Include="autentikacija.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>autentikacija.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DNDSustav.cs" />
+    <Compile Include="EventArgsKorisnik.cs" />
+    <Compile Include="Eventi.cs" />
+    <Compile Include="GlavniIzbornik_Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlavniIzbornik_Profesor.Designer.cs">
+      <DependentUpon>GlavniIzbornik_Profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlavniIzbornik_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlavniIzbornik_Student.Designer.cs">
+      <DependentUpon>GlavniIzbornik_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>autentikacija.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PocetniIzbornik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PocetniIzbornik.Designer.cs">
+      <DependentUpon>PocetniIzbornik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoTabFocusButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prijava.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Prijava.Designer.cs">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registracija.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registracija.Designer.cs">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCDodajSliku.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDodajSliku.Designer.cs">
+      <DependentUpon>UCDodajSliku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPregledEdukacijaKorisnik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPregledEdukacijaKorisnik.Designer.cs">
+      <DependentUpon>UCPregledEdukacijaKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPregledIspitaStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPregledIspitaStudent.Designer.cs">
+      <DependentUpon>UCPregledIspitaStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UCKoriscnickiProfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCKoriscnickiProfil.Designer.cs">
+      <DependentUpon>UCKoriscnickiProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCIzbornik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCIzbornik.Designer.cs">
+      <DependentUpon>UCIzbornik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPocetnaStranica.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPocetnaStranica.Designer.cs">
+      <DependentUpon>UCPocetnaStranica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPostavke.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPostavke.Designer.cs">
+      <DependentUpon>UCPostavke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPregledEdukacijaProfesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPregledEdukacijaProfesor.Designer.cs">
+      <DependentUpon>UCPregledEdukacijaProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPregledIspitaProfesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPregledIspitaProfesor.Designer.cs">
+      <DependentUpon>UCPregledIspitaProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPregledIzvjestajaProfesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPregledIzvjestajaProfesor.Designer.cs">
+      <DependentUpon>UCPregledIzvjestajaProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPregledIzvjestajaStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPregledIzvjestajaStudent.Designer.cs">
+      <DependentUpon>UCPregledIzvjestajaStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPregledTematskihCjelinaProfesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPregledTematskihCjelinaProfesor.Designer.cs">
+      <DependentUpon>UCPregledTematskihCjelinaProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPregledTematskihCjelinaStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPregledTematskihCjelinaStudent.Designer.cs">
+      <DependentUpon>UCPregledTematskihCjelinaStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTrgovina.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTrgovina.Designer.cs">
+      <DependentUpon>UCTrgovina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCUredjivanjeEdukacija.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCUredjivanjeEdukacija.Designer.cs">
+      <DependentUpon>UCUredjivanjeEdukacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uloga.cs">
+      <DependentUpon>autentikacija.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Zaboravljena lozinka.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Zaboravljena lozinka.Designer.cs">
+      <DependentUpon>Zaboravljena lozinka.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GlavniIzbornik_Profesor.resx">
+      <DependentUpon>GlavniIzbornik_Profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlavniIzbornik_Student.resx">
+      <DependentUpon>GlavniIzbornik_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PocetniIzbornik.resx">
+      <DependentUpon>PocetniIzbornik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijava.resx">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registracija.resx">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDodajSliku.resx">
+      <DependentUpon>UCDodajSliku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPregledEdukacijaKorisnik.resx">
+      <DependentUpon>UCPregledEdukacijaKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPregledIspitaStudent.resx">
+      <DependentUpon>UCPregledIspitaStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UCKoriscnickiProfil.resx">
+      <DependentUpon>UCKoriscnickiProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCIzbornik.resx">
+      <DependentUpon>UCIzbornik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPocetnaStranica.resx">
+      <DependentUpon>UCPocetnaStranica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPostavke.resx">
+      <DependentUpon>UCPostavke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPregledEdukacijaProfesor.resx">
+      <DependentUpon>UCPregledEdukacijaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPregledIspitaProfesor.resx">
+      <DependentUpon>UCPregledIspitaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPregledIzvjestajaProfesor.resx">
+      <DependentUpon>UCPregledIzvjestajaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPregledIzvjestajaStudent.resx">
+      <DependentUpon>UCPregledIzvjestajaStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPregledTematskihCjelinaProfesor.resx">
+      <DependentUpon>UCPregledTematskihCjelinaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPregledTematskihCjelinaStudent.resx">
+      <DependentUpon>UCPregledTematskihCjelinaStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTrgovina.resx">
+      <DependentUpon>UCTrgovina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCUredjivanjeEdukacija.resx">
+      <DependentUpon>UCUredjivanjeEdukacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zaboravljena lozinka.resx">
+      <DependentUpon>Zaboravljena lozinka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="autentikacija.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>autentikacija.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="autentikacija.edmx.diagram">
+      <DependentUpon>autentikacija.edmx</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hendrix_by_luis_alves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anonymous_user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="autentikacija.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>autentikacija.Context.cs</LastGenOutput>
+      <DependentUpon>autentikacija.edmx</DependentUpon>
+    </Content>
+    <Content Include="autentikacija.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>autentikacija.edmx</DependentUpon>
+      <LastGenOutput>autentikacija.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
